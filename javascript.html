@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="euc-kr" />
+    <title>Page Title</title>
+    <script type="text/javascript">
+    /*
+    javascript
+    web3요소
+    html - 구조
+    css - 모양
+    javascript - 동적인 움직임
+    1. html 내용을 변경
+    2. html 속성을 변경할 수 있다.
+    3. html style 속성을 변경할 수 있다.
+    4. 유효성 검사를 할 수 있다.
+
+    // 유효성 검사란 ? 사용자가 올바른 값을 입력하였나 확인하는 것.
+
+    javascript는 웹에서 사용하는 프로그래밍 언어
+     */
+     var bs = 300;
+     var ss = 100;
+     var fontsize;
+
+     function changesize(size){
+         if (size=='bsw'){
+             document.myImage.width=bs;
+         }
+         if(size=='ssw'){
+             document.myImage.width=ss;
+         }
+         if(size=='bsh'){
+             document.myImage.height=bs;
+         }
+         if(size=='ssh'){
+             document.myImage.height=ss;
+         }
+     }
+         function fontsize(size){
+
+             var demo=document.getElementById('demo');
+
+             if(size==30){
+                 demo.style.fontsize="30px";
+             }
+             if(size==10){
+                 demo.style.fontsize="10px";
+             }
+         }
+         function fontsize30(){
+
+             var demo=document.getElementById('demo');
+
+                 demo.style.fontsize="30px";
+
+         }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="demoInput">
+    <button type="button" onclick="alert(document.getElementById('demoInput').value);">사용자 입력 확인</button>
+
+
+    <p id="demo">javascript can change html content</p>
+    <!-- p 태그 display none= 감춤
+    보여주고 싶으면 display css 속성을 block 해주면 된다.-->
+    <button type="button" onclick="document.getElementById('demo').style.display='none';">demo P태그 감추기</button>
+    <button type="button" onclick="document.getElementById('demo').style.display='block';">demo P태그 나타내기</button>
+    <button type="button" onclick="fontsize30()">fontsize 30px</button>
+    <button type="button" onclick="fontsize(10)">fontsize 10px</button>
+    <button type="button" onclick="document.getElementById('demo').style.fontsize='30px';">fontsize 30px</button>
+    <button type="button" onclick="document.getElementById('demo').style.fontsize='10px';">fontsize 10px</button>
+
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML='hello javascript?';">Click me</button>
+    <br>
+    <img id="myImage" src="bultoff.jpg" name=myImage width="100" height="100">
+    <br>
+    <!-- 버튼 클릭시 이미지의 width를 300과 100으로 변경되도록 만들어보자.-->
+    <button type="button" onclick="document.getElementById('myImage').src='bulton.jpg';">turn on</button>
+    <button type="button" onclick="document.getElementById('myImage').src='bultoff.jpg';">turn off</button>
+    <button type="button" onclick="changesize('bsw')">width 300</button>
+    <button type="button" onclick="changesize('ssw')">width 100</button>
+    <button type="button" onclick="changesize('bsh')">height 300</button>
+    <button type="button" onclick="changesize('ssh')">height 100</button>
+</body>
+</html>

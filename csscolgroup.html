@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="euc-kr" />
+    <title>Page Title</title>
+    <style>
+        table,th,td{
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            height: 20px;
+            padding: 2px;
+        }
+        table{
+            border-width: 2px;
+            width: 80%;
+        }
+        th{
+            border-bottom-width: 2px;
+            height: 25px;
+            text-align: center;
+        }
+        tfoot{
+            background-color:gray;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>테이블의 제목부분</caption>
+
+        <colgroup>
+            <col style="background: red" span="2">
+            <col style="background: yellow">
+
+        </colgroup>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>3476896</td>
+            <td>My first HTML</td>
+            <td>$53</td>
+        </tr>
+        <tr>
+            <td>5869207</td>
+            <td>My first CSS</td>
+            <td>$49</td>
+        </tr>
+        <tr>
+            <td>3476896</td>
+            <td>My first HTML</td>
+            <td>$53</td>
+        </tr>
+        <tr>
+            <td>5869207</td>
+            <td>My first CSS</td>
+            <td>$49</td>
+        </tr>
+         <tr>
+            <td>3476896</td>
+            <td>My first HTML</td>
+            <td>$53</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td>..</td>
+                <td>text</td>
+                <td>total</td>
+            </tr>
+        </tfoot>
+
+    </table>
+</body>
+</html>
